@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block content%}
+<div class="row">
+    <div class="col-md-6">
+        <img src="../static/assets/undraw_Social_media_re_w12q.svg" alt="" class="illustration">
+    </div>
+    <div class="col-md-6 form-container">
+        <h1>Sign Up to ScrapIT</h1>
+        <div style="text-align: center;margin-bottom: 2px;">{{ msg }}</div>
+        <form action="{{ url_for('register') }}" method="post">
+            <div class="mb-3">
+                <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Enter Your Email">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control form-control-lg" name="password" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="nav-link btn btn-primary register">Sign Up</button>
+            <p class="form-msg">Already have an account?<a href="{{ url_for('login') }}">Log In</a></p>
+        </form>
+    </div>
+</div>
+{% endblock%}

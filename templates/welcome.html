@@ -1,0 +1,15 @@
+{% extends "base2.html" %}
+{% block title %}ScrapIt | Scrape data you need{% endblock %}
+{% block content%}
+<div class="container1">
+    <div class="row">
+        <div class="container-text col-md-6 row1">
+            <h1>Hooray! You are now ScrapIT family member</h1>
+            <a class="nav-link btn btn-primary register extract" href="{{ url_for('extract') }}">Start Here.</a>
+        </div>
+        <div class="col-md-6">
+            <img src="../static/assets/ScrapIT-removebg-preview1.png" alt="logo" class="logo">
+        </div>
+    </div>
+</div>
+{% endblock%}

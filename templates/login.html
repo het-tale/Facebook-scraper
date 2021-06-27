@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Access Your Account Easily{% endblock %}
+{% block content%}
+<div class="row">
+    <div class="col-md-6">
+        <img src="../static/assets/undraw_Social_media_re_w12q.svg" alt="" class="illustration">
+    </div>
+    <div class="col-md-6 form-container">
+        <h1>Login In to Your Account</h1>
+        <form action="{{ url_for('login') }}" method="post">
+            <div class="mb-3">
+                <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Enter Your Email">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control form-control-lg" name="password" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="nav-link btn btn-primary register">Log in</button>
+            <p class="form-msg">Don't have an account yet?<a href="{{ url_for('register') }}">Sign Up</a></p>
+        </form>
+    </div>
+</div>
+{% endblock%}
